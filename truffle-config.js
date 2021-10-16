@@ -1,4 +1,4 @@
-require('babel-register');
+require('babel-register'); //main entry point of this folder
 require('babel-polyfill');
 
 module.exports = {
@@ -9,7 +9,12 @@ module.exports = {
       network_id: "*" // Match any network id
     },
   },
-  contracts_directory: './src/contracts/',
+  compilers: {
+    solc: {
+      version: "0.4.24" //(Default: Truffle's installed    solc)
+    }
+   },
+  contracts_directory: './src/contracts/',  //where smartcontract is
   contracts_build_directory: './src/abis/',
   compilers: {
     solc: {
@@ -19,4 +24,4 @@ module.exports = {
       }
     }
   }
-}
+};
