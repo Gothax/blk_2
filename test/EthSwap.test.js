@@ -1,9 +1,11 @@
 const Token = artifacts.require('Token');
 const EthSwap = artifacts.require('EthSwap');
-//code for automated test
+
 require('chai')
-    .use(require('chai-as-promised'))
-    .should
+  .use(require('chai-as-promised'))
+  .should()
+
+//code for automated test
     
 function tokens(n){
     return web3.utils.toWei(n, 'ether');
